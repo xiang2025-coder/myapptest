@@ -5,138 +5,136 @@ Preparing the "kubernetes" executor
 Using Kubernetes namespace: ionic-runners
 Using Kubernetes executor with image 319312831725.dkr.ecr.us-west-2.amazonaws.com/appflow-runners/linux:2025.06 ...
 Using attach strategy to execute scripts...
-Using effective pull policy of [Always] for container init-permissions
 Using effective pull policy of [Always] for container metrics
 Using effective pull policy of [Always] for container build
 Using effective pull policy of [Always] for container helper
+Using effective pull policy of [Always] for container init-permissions
 Preparing environment
-Waiting for pod ionic-runners/runner-8edcfcad2-project-0-concurrent-7-huntfnjk to be running, status is Pending
-Waiting for pod ionic-runners/runner-8edcfcad2-project-0-concurrent-7-huntfnjk to be running, status is Pending
-	ContainersNotReady: "containers with unready status: [build helper metrics]"
-	ContainersNotReady: "containers with unready status: [build helper metrics]"
-Running on runner-8edcfcad2-project-0-concurrent-7-huntfnjk via gitlab-runner-7dffd7b966-798h4...
+Waiting for pod ionic-runners/runner-8edcfcad2-project-0-concurrent-2-x5wg8h9x to be running, status is Pending
+Running on runner-8edcfcad2-project-0-concurrent-2-x5wg8h9x via gitlab-runner-7dffd7b966-798h4...
 
 Getting source from Git repository
 Gitaly correlation ID: 
 Fetching changes...
 Initialized empty Git repository in /builds/xiang2025-coder/myapptest/.git/
 Created fresh repository.
-Checking out 54bb98e7 as detached HEAD (ref is main)...
+Checking out 07f7702d as detached HEAD (ref is main)...
 
 Updating/initializing submodules...
 Updated submodules
 
 Executing "step_script" stage of the job script
 $ pre-build
-[08:03:25]: Building project....
+[08:06:40]: Building project....
 $ run "fetch-updates"
 Checking for build process updates...
 $ run "build-android"
-[08:03:28]: ---------------------------------
-[08:03:28]: --- Step: add_extra_platforms ---
-[08:03:28]: ---------------------------------
-[08:03:28]: Setting '[:web]' as extra SupportedPlatforms
+[08:06:43]: ---------------------------------
+[08:06:43]: --- Step: add_extra_platforms ---
+[08:06:43]: ---------------------------------
+[08:06:43]: Setting '[:web]' as extra SupportedPlatforms
 /builds/xiang2025-coder/myapptest/fastlane/outsystems/errors/detectors/pdm_plugins.rb:8: warning: character class has '-' without escape
 /builds/xiang2025-coder/myapptest/fastlane/outsystems/errors/detectors/pdm_plugins.rb:15: warning: character class has '-' without escape
-[08:03:28]: ------------------------------
-[08:03:28]: --- Step: default_platform ---
-[08:03:28]: ------------------------------
-[08:03:28]: Driving the lane 'android build_android' 🚀
-[08:03:28]: ---------------------------------
-[08:03:28]: --- Step: prepare_environment ---
-[08:03:28]: ---------------------------------
-[08:03:28]: Setting default environment variables to tidy up logs. These can be overridden by setting them in Appflow.
-[08:03:28]: 
-[08:03:28]: Set COREPACK_ENABLE_AUTO_PIN=0 (Suppress yarn warnings)
-[08:03:28]: -------------------------
-[08:03:28]: --- Step: sentry_init ---
-[08:03:28]: -------------------------
-[08:03:28]: ----------------------------
-[08:03:28]: --- Step: begin_building ---
-[08:03:28]: ----------------------------
-[08:03:28]: Began building @ 2025-11-07T08:03:28
-[08:03:28]: ---------------------------
-[08:03:28]: --- Step: build_summary ---
-[08:03:28]: ---------------------------
+[08:06:43]: ------------------------------
+[08:06:43]: --- Step: default_platform ---
+[08:06:43]: ------------------------------
+[08:06:43]: Driving the lane 'android build_android' 🚀
+[08:06:43]: ---------------------------------
+[08:06:43]: --- Step: prepare_environment ---
+[08:06:43]: ---------------------------------
+[08:06:43]: Setting default environment variables to tidy up logs. These can be overridden by setting them in Appflow.
+[08:06:43]: 
+[08:06:43]: Set COREPACK_ENABLE_AUTO_PIN=0 (Suppress yarn warnings)
+[08:06:43]: -------------------------
+[08:06:43]: --- Step: sentry_init ---
+[08:06:43]: -------------------------
+[08:06:43]: ----------------------------
+[08:06:43]: --- Step: begin_building ---
+[08:06:43]: ----------------------------
+[08:06:43]: Began building @ 2025-11-07T08:06:43
+[08:06:43]: ---------------------------
+[08:06:43]: --- Step: build_summary ---
+[08:06:43]: ---------------------------
 
 +---------------------------------------------------+
 |                   Build Summary                   |
 +---------------------+-----------------------------+
 | Runners Revision    | Latest                      |
-| Job ID              | 10553980                    |
+| Job ID              | 10553987                    |
 | Node.js version     | v20.19.3                    |
 | Cordova CLI version | 12.0.0 (cordova-lib@12.0.2) |
 | npm version         | 10.8.2                      |
 | yarn version        | 1.22.22                     |
 +---------------------+-----------------------------+
 
-[08:03:29]: No build credential specified
-[08:03:29]: ---------------------------------
-[08:03:29]: --- Step: add_git_credentials ---
-[08:03:29]: ---------------------------------
-[08:03:29]: Writing git-credentials files
-[08:03:29]: git-credentials successfully added to project
-[08:03:29]: --------------------------------
-[08:03:29]: --- Step: get_appflow_config ---
-[08:03:29]: --------------------------------
-[08:03:29]: Checking for appflow.config.json
-[08:03:29]: Appflow config not detected
-[08:03:29]: --------------------------------
-[08:03:29]: --- Step: dependency_install ---
-[08:03:29]: --------------------------------
-[08:03:29]: ---------------------------
-[08:03:29]: --- Step: set_java_home ---
-[08:03:29]: ---------------------------
-[08:03:29]: Try to detect the android gradle plugin version
-[08:03:29]: ./build.gradle file not found in the project: using default Java version
-[08:03:29]: ----------------------------------
-[08:03:29]: --- Step: modify_gradle_config ---
-[08:03:29]: ----------------------------------
-[08:03:29]: No custom native config found... skipping
-[08:03:29]: Building android (in /builds/xiang2025-coder/myapptest/./)...
-[08:03:29]: -------------------------
-[08:03:29]: --- Step: bundledebug ---
-[08:03:29]: -------------------------
-[08:03:29]: ▸ Downloading https://services.gradle.org/distributions/gradle-8.10-all.zip
-[08:03:31]: ▸ .....................10%......................20%......................30%.....................40%......................50%......................60%......................70%.....................80%......................90%......................100%
-[08:03:35]: ▸ Welcome to Gradle 8.10!
-[08:03:35]: ▸ Here are the highlights of this release:
-[08:03:35]: ▸ - Support for Java 23
-[08:03:35]: ▸ - Faster configuration cache
-[08:03:35]: ▸ - Better configuration cache reports
-[08:03:35]: ▸ For more details see https://docs.gradle.org/8.10/release-notes.html
-[08:03:35]: ▸ Starting a Gradle Daemon (subsequent builds will be faster)
-[08:04:04]: ▸ FAILURE: Build failed with an exception.
-[08:04:04]: ▸ * What went wrong:
-[08:04:04]: ▸ Could not determine the dependencies of task ':app:buildDebugPreBundle'.
-[08:04:04]: ▸ > Could not resolve all dependencies for configuration ':app:debugRuntimeClasspath'.
-[08:04:04]: ▸ > Could not resolve project :capacitor-android.
-[08:04:04]: ▸ Required by:
-[08:04:04]: ▸ project :app
-[08:04:04]: ▸ > No matching variant of project :capacitor-android was found. The consumer was configured to find a library for use during runtime, preferably optimized for Android, as well as attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '8.2.2', attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' but:
-[08:04:04]: ▸ - No variants exist.
-[08:04:04]: ▸ > Could not resolve project :capacitor-cordova-android-plugins.
-[08:04:04]: ▸ Required by:
-[08:04:04]: ▸ project :app
-[08:04:04]: ▸ > No matching variant of project :capacitor-cordova-android-plugins was found. The consumer was configured to find a library for use during runtime, preferably optimized for Android, as well as attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '8.2.2', attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' but:
-[08:04:04]: ▸ - No variants exist.
-[08:04:04]: ▸ * Try:
-[08:04:04]: ▸ > Creating consumable variants is explained in more detail at https://docs.gradle.org/8.10/userguide/declaring_dependencies.html#sec:resolvable-consumable-configs.
-[08:04:04]: ▸ > Review the variant matching algorithm at https://docs.gradle.org/8.10/userguide/variant_attributes.html#sec:abm_algorithm.
-[08:04:04]: ▸ > Run with --stacktrace option to get the stack trace.
-[08:04:04]: ▸ > Run with --info or --debug option to get more log output.
-[08:04:04]: ▸ > Run with --scan to get full insights.
-[08:04:04]: ▸ > Get more help at https://help.gradle.org.
-[08:04:04]: ▸ Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
-[08:04:04]: ▸ You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
-[08:04:04]: ▸ For more on this, please refer to https://docs.gradle.org/8.10/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
-[08:04:04]: ▸ BUILD FAILED in 35s
-[08:04:05]: -------------------------
-[08:04:05]: --- Step: upload_logs ---
-[08:04:05]: -------------------------
-[08:04:07]: --------------------------------------
-[08:04:07]: --- Step: sentry_capture_exception ---
-[08:04:07]: --------------------------------------
+[08:06:44]: No build credential specified
+[08:06:44]: ---------------------------------
+[08:06:44]: --- Step: add_git_credentials ---
+[08:06:44]: ---------------------------------
+[08:06:44]: Writing git-credentials files
+[08:06:44]: git-credentials successfully added to project
+[08:06:44]: --------------------------------
+[08:06:44]: --- Step: get_appflow_config ---
+[08:06:44]: --------------------------------
+[08:06:44]: Checking for appflow.config.json
+[08:06:44]: Appflow config not detected
+[08:06:44]: --------------------------------
+[08:06:44]: --- Step: dependency_install ---
+[08:06:44]: --------------------------------
+[08:06:44]: ---------------------------
+[08:06:44]: --- Step: set_java_home ---
+[08:06:44]: ---------------------------
+[08:06:44]: Try to detect the android gradle plugin version
+[08:06:44]: ./build.gradle file not found in the project: using default Java version
+[08:06:44]: ----------------------------------
+[08:06:44]: --- Step: modify_gradle_config ---
+[08:06:44]: ----------------------------------
+[08:06:44]: No custom native config found... skipping
+[08:06:44]: Building android (in /builds/xiang2025-coder/myapptest/./)...
+[08:06:44]: -------------------------
+[08:06:44]: --- Step: bundledebug ---
+[08:06:44]: -------------------------
+[08:06:44]: ▸ Downloading https://services.gradle.org/distributions/gradle-8.10-all.zip
+[08:06:46]: ▸ .....................10%......................20%......................30%.....................40%......................50%......................60%......................70%.....................80%......................90%......................100%
+[08:06:50]: ▸ Welcome to Gradle 8.10!
+[08:06:50]: ▸ Here are the highlights of this release:
+[08:06:50]: ▸ - Support for Java 23
+[08:06:50]: ▸ - Faster configuration cache
+[08:06:50]: ▸ - Better configuration cache reports
+[08:06:50]: ▸ For more details see https://docs.gradle.org/8.10/release-notes.html
+[08:06:50]: ▸ Starting a Gradle Daemon (subsequent builds will be faster)
+[08:07:16]: ▸ FAILURE: Build failed with an exception.
+[08:07:16]: ▸ * What went wrong:
+[08:07:16]: ▸ Could not determine the dependencies of task ':app:buildDebugPreBundle'.
+[08:07:16]: ▸ > Could not resolve all dependencies for configuration ':app:debugRuntimeClasspath'.
+[08:07:16]: ▸ > Could not resolve project :capacitor-android.
+[08:07:16]: ▸ Required by:
+[08:07:16]: ▸ project :app
+[08:07:16]: ▸ > No matching variant of project :capacitor-android was found. The consumer was configured to find a library for use during runtime, preferably optimized for Android, as well as attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '8.2.2', attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' but:
+[08:07:16]: ▸ - No variants exist.
+[08:07:16]: ▸ > Could not resolve project :capacitor-cordova-android-plugins.
+[08:07:16]: ▸ Required by:
+[08:07:16]: ▸ project :app
+[08:07:16]: ▸ > No matching variant of project :capacitor-cordova-android-plugins was found. The consumer was configured to find a library for use during runtime, preferably optimized for Android, as well as attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '8.2.2', attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' but:
+[08:07:16]: ▸ - No variants exist.
+[08:07:16]: ▸ * Try:
+[08:07:16]: ▸ > Creating consumable variants is explained in more detail at https://docs.gradle.org/8.10/userguide/declaring_dependencies.html#sec:resolvable-consumable-configs.
+[08:07:16]: ▸ > Review the variant matching algorithm at https://docs.gradle.org/8.10/userguide/variant_attributes.html#sec:abm_algorithm.
+[08:07:16]: ▸ > Run with --stacktrace option to get the stack trace.
+[08:07:16]: ▸ > Run with --info or --debug option to get more log output.
+[08:07:16]: ▸ > Run with --scan to get full insights.
+[08:07:16]: ▸ > Get more help at https://help.gradle.org.
+[08:07:16]: ▸ Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+[08:07:16]: ▸ You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+[08:07:16]: ▸ For more on this, please refer to https://docs.gradle.org/8.10/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+[08:07:16]: ▸ BUILD FAILED in 31s
+[08:07:16]: -------------------------
+[08:07:16]: --- Step: upload_logs ---
+[08:07:16]: -------------------------
+[08:07:17]: Unable to upload package list log. Skipping.
+[08:07:18]: --------------------------------------
+[08:07:18]: --- Step: sentry_capture_exception ---
+[08:07:18]: --------------------------------------
 +-------------------------------------------+
 |               Lane Context                |
 +-------------------+-----------------------+
@@ -145,7 +143,7 @@ $ run "build-android"
 | LANE_NAME         | android build_android |
 | GRADLE_BUILD_TYPE | debug                 |
 +-------------------+-----------------------+
-[08:04:07]: Shell command exited with exit status 1 instead of 0.
+[08:07:18]: Shell command exited with exit status 1 instead of 0.
 Downloading https://services.gradle.org/distributions/gradle-8.10-all.zip
 .....................10%......................20%......................30%.....................40%......................50%......................60%......................70%.....................80%......................90%......................100%
 
@@ -190,7 +188,7 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.10/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 35s
+BUILD FAILED in 31s
 
 
 +-----------------------------------------------+
@@ -209,12 +207,12 @@ BUILD FAILED in 35s
 | 9    | dependency_install       | 0           |
 | 10   | set_java_home            | 0           |
 | 11   | modify_gradle_config     | 0           |
-| 💥   | bundledebug              | 35          |
+| 💥   | bundledebug              | 32          |
 | 13   | upload_logs              | 1           |
 | 14   | sentry_capture_exception | 0           |
 +------+--------------------------+-------------+
 
-[08:04:07]: fastlane finished with errors
+[08:07:18]: fastlane finished with errors
 /usr/local/bundle/bin/fastlane: [!] Shell command exited with exit status 1 instead of 0. (FastlaneCore::Interface::FastlaneShellError)
 Downloading https://services.gradle.org/distributions/gradle-8.10-all.zip
 .....................10%......................20%......................30%.....................40%......................50%......................60%......................70%.....................80%......................90%......................100%
@@ -260,7 +258,7 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.10/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 35s
+BUILD FAILED in 31s
 
 
 Running after_script

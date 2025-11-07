@@ -1,5 +1,4 @@
 include ':app'
 include ':capacitor-android'
 project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
-include ':capacitor-cordova-android-plugins'
-project(':capacitor-cordova-android-plugins').projectDir = new File('../node_modules/@capacitor/cordova-android-plugins/capacitor-cordova-android-plugins')
+// Cordova 插件模块仅在项目安装了 Cordova 插件并运行 cap sync 后才存在
