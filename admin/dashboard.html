@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0a0a0f;
+            color: #00ffcc;
+            display: flex;
+            height: 100vh;
+        }
+        .admin-panel {
+            width: 400px;
+            padding: 20px;
+            background: rgba(0, 255, 204, 0.1);
+            border-right: 1px solid #00ffcc;
+            overflow-y: auto;
+        }
+        .preview-panel {
+            flex: 1;
+            padding: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #00ffcc;
+        }
+        .settings-section {
+            margin-bottom: 20px;
+        }
+        .settings-section h2 {
+            margin-top: 0;
+        }
+        .exit-link {
+            color: #00ffcc;
+            text-decoration: none;
+            border: 1px solid #00ffcc;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .exit-link:hover {
+            background-color: #00ffcc;
+            color: #0a0a0f;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-panel">
+        <header>
+            <h1>后台管理</h1>
+            <a href="../index.html" class="exit-link">退出</a>
+        </header>
+        <main>
+            <div class="settings-section">
+                <h2>画布设置</h2>
+                <form id="canvas-settings-form">
+                    <label for="background-image">背景图片:</label>
+                    <input type="file" id="background-image" accept="image/*"><br><br>
+                    <label for="canvas-width">画布宽度:</label>
+                    <input type="number" id="canvas-width" placeholder="例如: 1920"><br><br>
+                    <label for="canvas-height">画布高度:</label>
+                    <input type="number" id="canvas-height" placeholder="例如: 1080"><br><br>
+                    <button type="button" id="save-canvas-size-btn">保存画布尺寸</button>
+                </form>
+            </div>
+            <div class="settings-section">
+                <h2>按钮管理</h2>
+                <div id="buttons-list"></div>
+                <button id="add-button">添加新按钮</button>
+            </div>
+            <div class="settings-section" id="button-details-section" style="display:none;">
+                <h2>按钮详情</h2>
+                <form id="button-details-form">
+                    <input type="hidden" id="button-id">
+                    <label for="button-label">按钮标签:</label>
+                    <input type="text" id="button-label">
+                </div>
+                <div>
+                    <label for="button-width">宽度:</label>
+                    <input type="number" id="button-width">
+                </div>
+                <div>
+                    <label for="button-height">高度:</label>
+                    <input type="number" id="button-height">
+                </div>
+                <div>
+                    <label for="button-image">按钮图片:</label>
+                    <input type="file" id="button-image" accept="image/*">
+                    <label for="button-udp-ip">UDP IP:</label>
+                    <input type="text" id="button-udp-ip"><br><br>
+                    <label for="button-udp-port">UDP Port:</label>
+                    <input type="number" id="button-udp-port"><br><br>
+                    <label for="button-udp-message">UDP Message:</label>
+                    <input type="text" id="button-udp-message"><br><br>
+                    <button type="submit">保存按钮</button>
+                    <button type="button" id="delete-button">删除按钮</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <div class="preview-panel">
+        <iframe src="../index.html"></iframe>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
